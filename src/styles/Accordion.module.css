@@ -33,8 +33,9 @@
 
 .accordionButton:hover,
 .accordionButton:focus-visible {
-  background-color: #f0f4f8; /* Light blue-gray */
+  background-color: #f0f4f891; /* Light blue-gray */
   color: #1a202c; /* Darker text */
+  border-radius: 12px 12px 0 0;
 }
 
 .accordionButtonOpen {
