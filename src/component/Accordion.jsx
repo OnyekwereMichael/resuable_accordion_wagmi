@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+// Accordion.js
+import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/Accordion.module.css';
 
-const Accordion = React.memo(({ title, children, defaultOpen = false }) => {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-
+const Accordion = React.memo(({ title, children, isOpen, onToggle }) => {
   return (
     <div className={styles.accordionContainer}>
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls="accordion-content"
         className={`${styles.accordionButton} ${isOpen ? styles.accordionButtonOpen : ''}`}
